@@ -5,6 +5,8 @@ import string
 import spacy
 pd.options.mode.chained_assignment = None
 
+data = pd.read_csv("./1 Billion Citation Dataset, v1 (124).csv", nrows=10000)
+data.to_csv("dataset.csv")
 
 full_df = pd.read_csv('./dataset.csv')
 df = full_df[["citationStringAnnotated","articleType"]]
